@@ -39,7 +39,7 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser((id, done) => {
-  User.findById(id) //TODO: define User
+  User.findById(id)
     .then(user => done(null, user))
     .catch(done);
 });
